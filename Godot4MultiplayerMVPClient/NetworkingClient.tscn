@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://jmbybekwvead"]
+
+[ext_resource type="Script" path="res://NetworkingClient.gd" id="1_rlsr6"]
+
+[node name="Networking" type="Node"]
+script = ExtResource("1_rlsr6")
+
+[node name="Lobby" type="Node2D" parent="."]
+
+[node name="ConnectBtn" type="Button" parent="Lobby"]
+offset_left = 437.0
+offset_top = 166.0
+offset_right = 619.0
+offset_bottom = 243.0
+text = "Connect"
+
+[node name="DisconnectBtn" type="Button" parent="Lobby"]
+offset_left = 437.0
+offset_top = 261.0
+offset_right = 619.0
+offset_bottom = 338.0
+text = "Disconnect"
+
+[connection signal="pressed" from="Lobby/ConnectBtn" to="." method="_on_connect_btn_pressed"]
+[connection signal="pressed" from="Lobby/DisconnectBtn" to="." method="_on_disconnect_btn_pressed"]

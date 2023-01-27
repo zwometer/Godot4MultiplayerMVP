@@ -1,0 +1,5 @@
+0b7126e0c6e86d3ec295a72f5aa6e0bd
+::res://::1674841528
+icon.svg::CompressedTexture2D::4915867829030184995::1674833617::1674833621::1::::<><>::
+NetworkingServer.gd::GDScript::-1::1674841450::0::1::::<>Node<>::
+server.tscn::PackedScene::6884250739622452943::1674841528::0::1::::<><>::res://NetworkingServer.gd
