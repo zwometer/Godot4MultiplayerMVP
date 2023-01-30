@@ -16,6 +16,7 @@ func _ready():
 	if DEV == true:
 		url = "127.0.0.1"
 	update_connection_buttons()
+	multiplayer.server_disconnected.connect(_on_server_disconnected)
 
 @rpc
 func sync_player_list(updated_connected_peer_ids):
@@ -36,6 +37,12 @@ func _on_disconnect_btn_pressed():
 	multiplayer_peer.close()
 	update_connection_buttons()
 	print("Disconnected.")
+
+
+func _on_server_disconnected():
+	multiplayer_peer.close()
+	update_connection_buttons()
+	print("Connection to server lost.")
 
 
 func update_connection_buttons() -> void:
